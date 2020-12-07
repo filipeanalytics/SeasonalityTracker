@@ -1,0 +1,120 @@
+/* we'll make the container to expand its color to the whole page. remove margin and expand to whole page */
+html, body {
+    height: 100%;
+    margin: 0;
+    /*display: grid;*/
+    /*!* min-width: 400px; *!*/
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #40585d;
+}
+
+/* container wraps up our entire page */
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #40585d;
+    /* background-color: #ddccee; */
+    color: #e6ffff;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+.container error {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #40585d;
+    /* background-color: #ddccee; */
+    color: red;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* specify css for a specific tag: h1*/
+.container h1 {
+    font-family: ui-monospace;
+    font-size: 40px;
+    color: chocolate;
+    margin-top: 80px;
+}
+
+.container h2 {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    margin-top: 0px;
+}
+
+/* Could modify each input individually. Create class for each input */
+.container input {
+    width: 350px;
+    height: 15px;
+    font-size: 15px;
+    margin: 2px;
+    padding: 20px;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-bottom: 15px;
+    
+}
+
+.container button{
+    width: 150px;
+    height: 40px;
+    background-color: chocolate;
+    margin: 3px;
+    border-radius: 10px;
+    font-size: larger;
+    border-color: transparent;
+    margin-top: 15px;
+    color: white;
+}
+
+.container p {
+    /* margin left top right options. */
+    margin: 100px;
+}
+
+.menu {
+    float: end;
+    MARGIN-BOTTOM: 0;
+    text-align: left;
+    padding-bottom: 0;
+    font-size: x-large;
+    border-style: solid;
+    width: 95px;
+    border-radius: 10px 10px 0 0;
+    border-color: transparent;
+}
+
+.menu:hover{
+    /*background-color: #4c9393;*/
+    background-color: chocolate;
+}
+.menu li {
+    display: inline;
+}
+.menu li + li {
+    margin-left: 0px;
+}
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container a {
+    /*font-size: xx-large;*/
+    text-decoration: none;
+    color: #a3bfca;
+    text-decoration: underline;
+} /* Globally */
+/* Each state */
+a:visited {     color: #a3bfca; }
+a:hover {color:chocolate; }
+/*a:focus { text-decoration: none; }*/
+/*a:active { text-decoration: none; }*/

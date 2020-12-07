@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <title> Data Collector App</title>
+    <head>
+        <!-- here we can put links to CSS FILES and JS files -->
+        <!-- .. goes one level up-->
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+        <body >
+            <header>
+                <!-- above we did the META part. Here we'll write the part that displays the content.-->
+                <!-- div are for better organizing HTML and referencing CSS. div=division -->
+                <div class="container">
+                    <h1 >Seasonality Tracker</h1>
+                    <h2 >For valid Stock symbols, please visit <a
+                            href="https://finance.yahoo.com" title="LinkYahoo">Yahoo Finance</a>
+                    </h2>
+                    <!-- inputs are implemented by using form tags. forms expects action from user.-->
+                     <!-- POST=send data through the webserver(sending email and height) or GET=when you call a file from the server -->
+                    <form action="{{url_for('plot')}}" method="POST">
+                        <!-- title is shown when the user holds the cursor in the input for a while -->
+                        <!-- placeholder=default text that input shows -->
+                        <!-- type is important. if its email, system will check for valid email -->
+                        <!-- name will be used by python to pull off that email address -->
+                        <!-- required makes the field mandatory -->
+                        <input title="Lookup stock symbols on Yahoo Finance"
+                               placeholder="Enter the stock symbol" type="text"
+                               name="stk_symbol"
+                               required> <br>
+                        <!-- if use type text instead of number you can't apply some restrictions to user input -->
+                        <!-- step interval between numbers allowed step="0.1" -->
+                        <input title="Total Years Back"
+                               placeholder="Enter total years back" type="number"
+                               min="1", max="50" step="1"    name="years_back" required>
+                        <br>
+                        <!-- buttom type defines the role of the bottom -->
+                        <button type="submit"> Submit</button>
+                    </form>
+                </div>
+            </header>
+
+            <div class="container">
+                <error>  {{error|safe}} </error>
+<!--                {%block content%}-->
+<!--                {%endblock%}-->
+            </div>
+        </body>
+</html>

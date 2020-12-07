@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <!-- here we can put links to CSS FILES and JS files -->
+        <!-- .. goes one level up-->
+        <link href="../static/main.css" rel="stylesheet">
+    </head>
+
+    <body >
+        <header>
+            <div class="container">
+                    <strong><nav>
+                        <ul class="menu">
+                            <li><a href="{{ url_for('index') }}">Home</a></li>
+                        </ul>
+                    </nav></strong>
+            </div>
+        </header>
+
+        <div class="container">
+            <script type="text/javascript" src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            {{htmlGraph|safe}}
+        </div>
+
+    </body>
+</html>
+
+
